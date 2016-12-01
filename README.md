@@ -1,2 +1,2 @@
 # minimal-toolchain
-Create toolchain with GitHub and Web IDE
+A toolchain with GitHub and Web IDE tool integrations
