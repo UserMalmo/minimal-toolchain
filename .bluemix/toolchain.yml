@@ -10,7 +10,9 @@ sample-repo:
   parameters:
     repo_name: "test-{{name}}"
     repo_url: https://github.com/TinaLindhqvist/App4UITest.git
-    type: clone    has_issues: false
+    type: clone
+    has_issues: false
+  
 #Web IDE
 webide:
   service_id: orion
