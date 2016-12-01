@@ -2,14 +2,14 @@
 name: "Minimal Toolchain Template"
 description: "This toolchain will be used in System Test.\n Click CREATE to start."
 version: 0.2
-image: data:image/png;base64,$file(minimaltoolchain.png,base64)
+image: data:image/png;base64,$file(toolchain.png,base64)
 
 # Github repos
 sample-repo:
   service_id: githubpublic
   parameters:
     repo_name: "test-{{name}}"
-    repo_url: https://github.com/TinaLindhqvist/App4UITest.git
+    repo_url: https://github.com/UserMalmo/App4UITest.git
     type: clone
     has_issues: false
   
