@@ -1,18 +1,25 @@
----
-name: "Minimal Toolchain Template"
-description: "This toolchain will be used in System Test.\n Click CREATE to start."
-version: 0.2
-image: data:image/png;base64,$file(toolchain.png,base64)
-
-# Github repos
-sample-repo:
-  service_id: githubpublic
-  parameters:
-    repo_name: "test-{{name}}"
-    repo_url: https://github.com/UserMalmo/App4UITest.git
-    type: clone
-    has_issues: false
-  
-#Web IDE
-webide:
-  service_id: orion
+version: '2'
+template:
+  name: 'Minimal Toolchain Template'
+  description: 'This toolchain will be used in System Test. Click CREATE to start.'
+  icon: toolchainIcon.png
+  image: toolchain.png
+  info:
+    git url: >-
+      [https://github.com/TinaLindhqvist/minimal-toolchain](https://github.com/TinaLindhqvist/minimal-toolchain)
+    git branch: >-
+      [master](https://github.com/TinaLindhqvist/minimal-toolchain/tree/master)
+toolchain:
+  name: 'minToolchain-{{timestamp}}'
+  template:
+    getting_started: "The Minimal Toolchain contains Git Labs and Web IDE integrations. Please start!"
+services:
+  sample-repo:
+    service_id: hostedgit
+    parameters:
+      repo_name: '{{toolchain.name}}'
+      repo_url: 'https://github.com/TinaLindhqvist/App4UITest'
+      type: clone
+      has_issues: false
+  webide:
+    service_id: orion
