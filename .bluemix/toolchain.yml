@@ -12,13 +12,13 @@ template:
 toolchain:
   name: 'minToolchain-{{timestamp}}'
   template:
-    getting_started: "The Minimal Toolchain contains Git Labs and Web IDE integrations. Please start!"
+    getting_started: "A Minimal Toolchain with Git Labs and Web IDE integrations. Enjoy!"
 services:
   sample-repo:
     service_id: hostedgit
     parameters:
       repo_name: '{{toolchain.name}}'
-      repo_url: 'https://github.com/TinaLindhqvist/App4UITest'
+      repo_url: 'https://github.com/UserMalmo/App4UITest'
       type: clone
       has_issues: false
   webide:
