@@ -18,7 +18,7 @@ services:
     service_id: hostedgit
     parameters:
       repo_name: '{{toolchain.name}}'
-      repo_url: 'https://github.com/UserMalmo/App4UITest'
+      repo_url: 'https://github.com/UserMalmo/minimal-application'
       type: clone
       has_issues: false
   webide:
